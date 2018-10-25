@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: register
+  profiles:
+    active: dev
+eureka:
+  server:
+    enable-self-preservation: true
+  instance:
+    preferIpAddress: true
+    hostname: ${spring.cloud.client.ip-address}
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
