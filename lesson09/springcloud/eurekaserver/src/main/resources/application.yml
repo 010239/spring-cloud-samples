@@ -1,0 +1,17 @@
+server:
+  port: 8761
+#spring:
+#  profiles:
+#    active: dev
+eureka:
+#  server:
+#    enable-self-preservation: false
+#  instance:
+#    preferIpAddress: true
+#    hostname: localhost #ָ����������
+#    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+  client: #serverһ���̶���Ҳ��client����Ϊclient��
+    registerWithEureka: false #�����Լ����Ƿ�����������Ҫע�ᵽ�Լ�
+    fetchRegistry: false #�����Լ����Ƿ�����������Ҫ�ӷ�������ȡע����Ϣ
+#    serviceUrl: #�����ַ
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
