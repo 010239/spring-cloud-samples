@@ -11,7 +11,7 @@ spring:
         git:
           uri: https://github.com/010239/spring-cloud-samples.git
           searchPaths: config-repo
-          username: 
+          username:
           password:
       label: master
 eureka:
